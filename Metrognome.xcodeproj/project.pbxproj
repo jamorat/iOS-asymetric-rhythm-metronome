@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		116449AB19563D5E00C78446 /* list-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A619563D5E00C78446 /* list-pause.png */; };
+		116449AC19563D5E00C78446 /* list-quiet-loud-accent.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A719563D5E00C78446 /* list-quiet-loud-accent.png */; };
+		116449AD19563D5E00C78446 /* list-quiet-accent.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A819563D5E00C78446 /* list-quiet-accent.png */; };
+		116449AE19563D5E00C78446 /* list-accent.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A919563D5E00C78446 /* list-accent.png */; };
+		116449AF19563D5E00C78446 /* list-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449AA19563D5E00C78446 /* list-plus.png */; };
 		1166F25A194CBADB00124B86 /* knob-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1166F259194CBADB00124B86 /* knob-icon.png */; };
 		1166F2A7194CBBFA00124B86 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1166F2A6194CBBFA00124B86 /* SpriteKit.framework */; };
 		1166F2AA194CBD6700124B86 /* MusicMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1166F2A9194CBD6700124B86 /* MusicMyScene.m */; };
@@ -43,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		116449A619563D5E00C78446 /* list-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-pause.png"; sourceTree = "<group>"; };
+		116449A719563D5E00C78446 /* list-quiet-loud-accent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-quiet-loud-accent.png"; sourceTree = "<group>"; };
+		116449A819563D5E00C78446 /* list-quiet-accent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-quiet-accent.png"; sourceTree = "<group>"; };
+		116449A919563D5E00C78446 /* list-accent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-accent.png"; sourceTree = "<group>"; };
+		116449AA19563D5E00C78446 /* list-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-plus.png"; sourceTree = "<group>"; };
 		1166F259194CBADB00124B86 /* knob-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "knob-icon.png"; sourceTree = "<group>"; };
 		1166F2A6194CBBFA00124B86 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		1166F2A8194CBD6700124B86 /* MusicMyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicMyScene.h; sourceTree = "<group>"; };
@@ -157,6 +167,11 @@
 		11D06969192793EC000C8685 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				116449A619563D5E00C78446 /* list-pause.png */,
+				116449A719563D5E00C78446 /* list-quiet-loud-accent.png */,
+				116449A819563D5E00C78446 /* list-quiet-accent.png */,
+				116449A919563D5E00C78446 /* list-accent.png */,
+				116449AA19563D5E00C78446 /* list-plus.png */,
 				11D0696A192793EC000C8685 /* Metrognome-Info.plist */,
 				11D0696B192793EC000C8685 /* InfoPlist.strings */,
 				11D0696E192793EC000C8685 /* main.m */,
@@ -260,15 +275,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116449AD19563D5E00C78446 /* list-quiet-accent.png in Resources */,
+				116449AC19563D5E00C78446 /* list-quiet-loud-accent.png in Resources */,
 				1166F25A194CBADB00124B86 /* knob-icon.png in Resources */,
 				1166F2AC194CBDBB00124B86 /* Spaceship.png in Resources */,
+				116449AB19563D5E00C78446 /* list-pause.png in Resources */,
 				11D0699D1927AB6B000C8685 /* singleClick.aiff in Resources */,
 				11D303511933BF4A00AF22B0 /* snap.aiff in Resources */,
+				116449AF19563D5E00C78446 /* list-plus.png in Resources */,
 				11D303531933C13F00AF22B0 /* low-click.aiff in Resources */,
 				11D06979192793ED000C8685 /* Main_iPad.storyboard in Resources */,
 				11D0697E192793ED000C8685 /* Images.xcassets in Resources */,
 				11D06976192793EC000C8685 /* Main_iPhone.storyboard in Resources */,
 				11D0696D192793EC000C8685 /* InfoPlist.strings in Resources */,
+				116449AE19563D5E00C78446 /* list-accent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
