@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1166F25A194CBADB00124B86 /* knob-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1166F259194CBADB00124B86 /* knob-icon.png */; };
+		1166F2A7194CBBFA00124B86 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1166F2A6194CBBFA00124B86 /* SpriteKit.framework */; };
+		1166F2AA194CBD6700124B86 /* MusicMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1166F2A9194CBD6700124B86 /* MusicMyScene.m */; };
+		1166F2AC194CBDBB00124B86 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 1166F2AB194CBDBB00124B86 /* Spaceship.png */; };
 		11D06963192793EC000C8685 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D06962192793EC000C8685 /* Foundation.framework */; };
 		11D06965192793EC000C8685 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D06964192793EC000C8685 /* CoreGraphics.framework */; };
 		11D06967192793EC000C8685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D06966192793EC000C8685 /* UIKit.framework */; };
@@ -22,6 +26,10 @@
 		11D06987192793EE000C8685 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D06966192793EC000C8685 /* UIKit.framework */; };
 		11D0698F192793EE000C8685 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11D0698D192793EE000C8685 /* InfoPlist.strings */; };
 		11D06991192793EE000C8685 /* MetrognomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D06990192793EE000C8685 /* MetrognomeTests.m */; };
+		11D0699B1927A369000C8685 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D0699A1927A369000C8685 /* AudioToolbox.framework */; };
+		11D0699D1927AB6B000C8685 /* singleClick.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 11D0699C1927AB6B000C8685 /* singleClick.aiff */; };
+		11D303511933BF4A00AF22B0 /* snap.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 11D303501933BF4A00AF22B0 /* snap.aiff */; };
+		11D303531933C13F00AF22B0 /* low-click.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 11D303521933C13F00AF22B0 /* low-click.aiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1166F259194CBADB00124B86 /* knob-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "knob-icon.png"; sourceTree = "<group>"; };
+		1166F2A6194CBBFA00124B86 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		1166F2A8194CBD6700124B86 /* MusicMyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicMyScene.h; sourceTree = "<group>"; };
+		1166F2A9194CBD6700124B86 /* MusicMyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicMyScene.m; sourceTree = "<group>"; };
+		1166F2AB194CBDBB00124B86 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		11D0695F192793EC000C8685 /* Metrognome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metrognome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D06962192793EC000C8685 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		11D06964192793EC000C8685 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +68,10 @@
 		11D0698C192793EE000C8685 /* MetrognomeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetrognomeTests-Info.plist"; sourceTree = "<group>"; };
 		11D0698E192793EE000C8685 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		11D06990192793EE000C8685 /* MetrognomeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetrognomeTests.m; sourceTree = "<group>"; };
+		11D0699A1927A369000C8685 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		11D0699C1927AB6B000C8685 /* singleClick.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = singleClick.aiff; sourceTree = "<group>"; };
+		11D303501933BF4A00AF22B0 /* snap.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = snap.aiff; sourceTree = "<group>"; };
+		11D303521933C13F00AF22B0 /* low-click.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "low-click.aiff"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1166F2A7194CBBFA00124B86 /* SpriteKit.framework in Frameworks */,
+				11D0699B1927A369000C8685 /* AudioToolbox.framework in Frameworks */,
 				11D06965192793EC000C8685 /* CoreGraphics.framework in Frameworks */,
 				11D06967192793EC000C8685 /* UIKit.framework in Frameworks */,
 				11D06963192793EC000C8685 /* Foundation.framework in Frameworks */,
@@ -103,6 +122,8 @@
 		11D06961192793EC000C8685 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1166F2A6194CBBFA00124B86 /* SpriteKit.framework */,
+				11D0699A1927A369000C8685 /* AudioToolbox.framework */,
 				11D06962192793EC000C8685 /* Foundation.framework */,
 				11D06964192793EC000C8685 /* CoreGraphics.framework */,
 				11D06966192793EC000C8685 /* UIKit.framework */,
@@ -120,7 +141,14 @@
 				11D06977192793ED000C8685 /* Main_iPad.storyboard */,
 				11D0697A192793ED000C8685 /* MetronomeViewController.h */,
 				11D0697B192793ED000C8685 /* MetronomeViewController.m */,
+				1166F2AB194CBDBB00124B86 /* Spaceship.png */,
+				1166F2A8194CBD6700124B86 /* MusicMyScene.h */,
+				1166F2A9194CBD6700124B86 /* MusicMyScene.m */,
+				1166F259194CBADB00124B86 /* knob-icon.png */,
 				11D0697D192793ED000C8685 /* Images.xcassets */,
+				11D0699C1927AB6B000C8685 /* singleClick.aiff */,
+				11D303501933BF4A00AF22B0 /* snap.aiff */,
+				11D303521933C13F00AF22B0 /* low-click.aiff */,
 				11D06969192793EC000C8685 /* Supporting Files */,
 			);
 			path = Metrognome;
@@ -232,6 +260,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1166F25A194CBADB00124B86 /* knob-icon.png in Resources */,
+				1166F2AC194CBDBB00124B86 /* Spaceship.png in Resources */,
+				11D0699D1927AB6B000C8685 /* singleClick.aiff in Resources */,
+				11D303511933BF4A00AF22B0 /* snap.aiff in Resources */,
+				11D303531933C13F00AF22B0 /* low-click.aiff in Resources */,
 				11D06979192793ED000C8685 /* Main_iPad.storyboard in Resources */,
 				11D0697E192793ED000C8685 /* Images.xcassets in Resources */,
 				11D06976192793EC000C8685 /* Main_iPhone.storyboard in Resources */,
@@ -256,6 +289,7 @@
 			files = (
 				11D0696F192793EC000C8685 /* main.m in Sources */,
 				11D0697C192793ED000C8685 /* MetronomeViewController.m in Sources */,
+				1166F2AA194CBD6700124B86 /* MusicMyScene.m in Sources */,
 				11D06973192793EC000C8685 /* MetronomeAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +509,7 @@
 				11D06996192793EE000C8685 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11D06997192793EE000C8685 /* Build configuration list for PBXNativeTarget "MetrognomeTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +518,7 @@
 				11D06999192793EE000C8685 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
