@@ -18,37 +18,51 @@
 
 @implementation MetronomeViewController
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     _timeItems = [NSMutableArray arrayWithObjects: @"1", @"1", @"2", @"3", @"0", @"1", @"1", @"2", @"3", @"0", @"1", @"1", @"1", nil];
-    NSLog(@"%f",([[UIScreen mainScreen] bounds].size.height - 100));
+    
+    CGPoint oldCenter=_timingList.center;
+    _timingList.transform=CGAffineTransformMakeRotation(-M_PI_2);
+    _timingList.center=oldCenter;
+    
+    
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)  interfaceOrientation duration:(NSTimeInterval)duration
+{
+    if (interfaceOrientation == 1 || interfaceOrientation == 2) {
+    //portrait
     CGRect newFrame = self.timingList.frame;
-    newFrame.size.height = 300.0;
-    newFrame.size.width = 300.0;
-    newFrame.origin.y = 400;
-    newFrame.origin.x = 400;
-    
-    NSLog(@"pooofff %f fffooop",newFrame.origin.y);
-    
-    //CGPoint oldCenter=self.timingList.center;
-    
-    //CGAffineTransform transformer = CGAffineTransformMakeRotation(-M_PI_2);
-    //self.timingList.center=oldCenter;
-    self.timingList.frame = newFrame;
-    self.timingList.transform=CGAffineTransformMakeRotation(-M_PI_2);
+        newFrame.size.height = 115;
+        newFrame.size.width = [[UIScreen mainScreen] bounds].size.width;
+        newFrame.origin.y = ([[UIScreen mainScreen] bounds].size.height-115);
+        newFrame.origin.x = 0;
+        self.timingList.frame = newFrame;
+    }else if (interfaceOrientation == 3 || interfaceOrientation == 4) {
+        CGRect newFrame = self.timingList.frame;
+        newFrame.size.height = 115;
+        newFrame.size.width = [[UIScreen mainScreen] bounds].size.height;
+        newFrame.origin.y = ([[UIScreen mainScreen] bounds].size.width-115);
+        newFrame.origin.x = 0;
+        self.timingList.frame = newFrame;
+    }
+    NSLog(@"%d", interfaceOrientation);
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(orientationChanged:)    name:UIDeviceOrientationDidChangeNotification  object:nil];
     
-    // _timingList.transform=CGAffineTransformMakeRotation(-M_PI_2);
     
-    //CGRect newFrame = self.timingList.frame;
-    //newFrame.origin.x = 200;
-    //self.timingList.frame = newFrame;
-}
+    }
 
 - (void)didReceiveMemoryWarning
 {
@@ -69,36 +83,11 @@
      
 }
 
-- (void)orientationChanged:(NSNotification *)notification{
-    [self adjustViewsForOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
-    NSLog(@"rotated");
-}
 
-- (void) adjustViewsForOrientation:(UIInterfaceOrientation) orientation {
-    NSLog(@"%d", orientation);
-    if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown)
-    {
-        //load the portrait view
-        //NSLog(@"portrait");
-    }
-    else if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight)
-    {
-        //load the landscape view
-        //NSLog(@"landscape");
-    }
-}
 
--(void)viewDidDisappear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter]removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
-}
 
 - (IBAction)bpmSlideControllerAction:(UISlider *)sender {
     self.bpmDisplay.text = [NSString stringWithFormat:@"%i",(int)self.bpmSlideController.value];
-    
-    //correct original: float demical = (60/self.bpmSlideController.value);
-    
-    //float demical = (60/self.bpmSlideController.value);
-    //also works w decimals: self.bpmDisplay.text = [NSString stringWithFormat:@"%f",demical];
 }
 
 - (void)enableTimer
@@ -133,9 +122,28 @@
     
 }
 
+
+
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
+    CGRect newFrame = self.timingList.frame;
+    newFrame.size.height = 200;
+    newFrame.size.width = 200;
+    newFrame.origin.y = 0;
+    newFrame.origin.x = 0;
+    
+}
+
 - (IBAction)stopTimer:(id)sender {
-    [_bpmTimer invalidate];
-    _bpmTimer = nil;
+    CGRect newFrame = self.timingList.frame;
+    
+    newFrame.size.height = 200;
+    newFrame.size.width = 200;
+    newFrame.origin.y = 0;
+    newFrame.origin.x = 0;
+    self.timingList.frame = newFrame;
+    //[_bpmTimer invalidate];
+    //_bpmTimer = nil;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

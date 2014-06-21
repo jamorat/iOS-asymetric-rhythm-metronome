@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xte-aR-TPs">
-                                <rect key="frame" x="190" y="435" width="33" height="30"/>
+                                <rect key="frame" x="166" y="188" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,7 +62,7 @@
                                     <action selector="stopTimer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Q63-sT-p8I"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bP2-xv-OX3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bP2-xv-OX3">
                                 <rect key="frame" x="-1" y="473" width="321" height="115"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,11 +74,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="bP2-xv-OX3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="11I-yy-GR0"/>
-                            <constraint firstAttribute="bottom" secondItem="bP2-xv-OX3" secondAttribute="bottom" constant="-20" id="dqg-Iw-al0"/>
-                            <constraint firstAttribute="trailing" secondItem="bP2-xv-OX3" secondAttribute="trailing" id="sIV-9K-yHL"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bpmDisplay" destination="K3d-uh-bC0" id="vpn-p3-Fas"/>
