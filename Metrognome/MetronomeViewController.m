@@ -43,16 +43,16 @@
     if (interfaceOrientation == 1 || interfaceOrientation == 2) {
     //portrait
     CGRect newFrame = self.timingList.frame;
-        newFrame.size.height = 115;
+        newFrame.size.height = 60;
         newFrame.size.width = [[UIScreen mainScreen] bounds].size.width;
-        newFrame.origin.y = ([[UIScreen mainScreen] bounds].size.height-115);
+        newFrame.origin.y = ([[UIScreen mainScreen] bounds].size.height-60);
         newFrame.origin.x = 0;
         self.timingList.frame = newFrame;
     }else if (interfaceOrientation == 3 || interfaceOrientation == 4) {
         CGRect newFrame = self.timingList.frame;
-        newFrame.size.height = 115;
+        newFrame.size.height = 60;
         newFrame.size.width = [[UIScreen mainScreen] bounds].size.height;
-        newFrame.origin.y = ([[UIScreen mainScreen] bounds].size.width-115);
+        newFrame.origin.y = ([[UIScreen mainScreen] bounds].size.width-60);
         newFrame.origin.x = 0;
         self.timingList.frame = newFrame;
     }
@@ -164,13 +164,13 @@
         
         
         if ([txt isEqualToString: @"0"]) {
-            cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
+            cell.imageView.image = [UIImage imageNamed:@"list-pause.png"];
         }else if ([txt isEqualToString: @"1"]) {
-            cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
+            cell.imageView.image = [UIImage imageNamed:@"list-accent.png"];
         }else if ([txt isEqualToString: @"2"]) {
-            cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
+            cell.imageView.image = [UIImage imageNamed:@"list-strike-1.png"];
         }else if ([txt isEqualToString: @"3"]) {
-            cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
+            cell.imageView.image = [UIImage imageNamed:@"list-strike-2.png"];
         }else if ([txt isEqualToString: @"4"]) {
             cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
         }
@@ -179,34 +179,35 @@
         
         
         
-        [[cell textLabel] setText:txt];
+        //[[cell textLabel] setText:txt];
         [[cell imageView] setHidden:NO];
         
-        if (indexPath.row ==2) {
-            cell.imageView.image = [UIImage imageNamed:@"Spaceship.png"];
-        }
-        //cell.imageView.image = [UIImage imageNamed:@"Spaceship.png"];
+        //if (indexPath.row ==2) {
+        //    cell.imageView.image = [UIImage imageNamed:@"Spaceship.png"];
+        //}
     }
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"1"]) {
+{   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"0"]) {
+        [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"1"]];
+        cell.imageView.image = [UIImage imageNamed:@"list-accent.png"];
+    } else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"1"]) {
         [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"2"]];
-        
-        
-    }else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"on"]) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"accent1"]];
-    }else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"accent1"]) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"accent2"]];
-    }else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"accent2"]) {
-       [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"off"]];
+        cell.imageView.image = [UIImage imageNamed:@"list-strike-1.png"];
+    } else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"2"]) {
+        [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"3"]];
+        cell.imageView.image = [UIImage imageNamed:@"list-strike-2.png"];
+    } else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"3"]) {
+        [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"0"]];
+        cell.imageView.image = [UIImage imageNamed:@"list-pause.png"];
     }
     NSLog(@"%@",[_timeItems objectAtIndex:indexPath.row]);
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.imageView.image = [UIImage imageNamed:@"knob-icon.png"];
+    
+    
     //[_timingList reloadData];
 }
 @end
