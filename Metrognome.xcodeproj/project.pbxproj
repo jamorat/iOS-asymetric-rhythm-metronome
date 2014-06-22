@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		116449AB19563D5E00C78446 /* list-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A619563D5E00C78446 /* list-pause.png */; };
-		116449AC19563D5E00C78446 /* list-quiet-loud-accent.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A719563D5E00C78446 /* list-quiet-loud-accent.png */; };
-		116449AD19563D5E00C78446 /* list-quiet-accent.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A819563D5E00C78446 /* list-quiet-accent.png */; };
+		116449AC19563D5E00C78446 /* list-strike-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A719563D5E00C78446 /* list-strike-2.png */; };
+		116449AD19563D5E00C78446 /* list-strike-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A819563D5E00C78446 /* list-strike-1.png */; };
 		116449AE19563D5E00C78446 /* list-accent.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449A919563D5E00C78446 /* list-accent.png */; };
 		116449AF19563D5E00C78446 /* list-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 116449AA19563D5E00C78446 /* list-plus.png */; };
 		1166F25A194CBADB00124B86 /* knob-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1166F259194CBADB00124B86 /* knob-icon.png */; };
@@ -49,8 +49,8 @@
 
 /* Begin PBXFileReference section */
 		116449A619563D5E00C78446 /* list-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-pause.png"; sourceTree = "<group>"; };
-		116449A719563D5E00C78446 /* list-quiet-loud-accent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-quiet-loud-accent.png"; sourceTree = "<group>"; };
-		116449A819563D5E00C78446 /* list-quiet-accent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-quiet-accent.png"; sourceTree = "<group>"; };
+		116449A719563D5E00C78446 /* list-strike-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-strike-2.png"; sourceTree = "<group>"; };
+		116449A819563D5E00C78446 /* list-strike-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-strike-1.png"; sourceTree = "<group>"; };
 		116449A919563D5E00C78446 /* list-accent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-accent.png"; sourceTree = "<group>"; };
 		116449AA19563D5E00C78446 /* list-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-plus.png"; sourceTree = "<group>"; };
 		1166F259194CBADB00124B86 /* knob-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "knob-icon.png"; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				116449A619563D5E00C78446 /* list-pause.png */,
-				116449A719563D5E00C78446 /* list-quiet-loud-accent.png */,
-				116449A819563D5E00C78446 /* list-quiet-accent.png */,
+				116449A719563D5E00C78446 /* list-strike-2.png */,
+				116449A819563D5E00C78446 /* list-strike-1.png */,
 				116449A919563D5E00C78446 /* list-accent.png */,
 				116449AA19563D5E00C78446 /* list-plus.png */,
 				11D0696A192793EC000C8685 /* Metrognome-Info.plist */,
@@ -275,8 +275,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116449AD19563D5E00C78446 /* list-quiet-accent.png in Resources */,
-				116449AC19563D5E00C78446 /* list-quiet-loud-accent.png in Resources */,
+				116449AD19563D5E00C78446 /* list-strike-1.png in Resources */,
+				116449AC19563D5E00C78446 /* list-strike-2.png in Resources */,
 				1166F25A194CBADB00124B86 /* knob-icon.png in Resources */,
 				1166F2AC194CBDBB00124B86 /* Spaceship.png in Resources */,
 				116449AB19563D5E00C78446 /* list-pause.png in Resources */,

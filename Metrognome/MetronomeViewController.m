@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    _timeItems = [NSMutableArray arrayWithObjects: @"1", @"1", @"2", @"3", @"0", @"1", @"1", @"2", @"3", @"0", @"1", @"1", @"1", nil];
+    _timeItems = [NSMutableArray arrayWithObjects: @"1", @"2", @"3", @"3", @"0", @"1", @"1", @"2", @"3", @"0", @"1", @"1", @"1", nil];
     
     CGPoint oldCenter=_timingList.center;
     _timingList.transform=CGAffineTransformMakeRotation(-M_PI_2);
@@ -73,10 +73,15 @@
     NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"singleClick" withExtension:@"aiff"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &sound1);
     
+    
+    
     NSURL *soundURL1 = [[NSBundle mainBundle] URLForResource:@"snap" withExtension:@"aiff"];
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL1, &sound2);
     
+    
+    
     NSURL *soundURL2 = [[NSBundle mainBundle] URLForResource:@"low-click" withExtension:@"aiff"];
+
     AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL2, &sound3);
     
      [self enableTimer];
@@ -147,16 +152,7 @@
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    //CGPoint oldCenter=tableView.center;
-    //_timingList.transform=CGAffineTransformMakeRotation(-M_PI_2);
-    //tableView.center=oldCenter;
-    
-    //_timingList.transform=CGAffineTransformMakeRotation(-M_PI_2);
-    
     return self.timeItems.count;
-    
-    //self.timingList.transform=CGAffineTransformMakeRotation(-M_PI_2);
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -165,8 +161,27 @@
     if (cell ==nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ident];
         NSString * txt = [self.timeItems objectAtIndex:indexPath.row];
+        
+        
+        if ([txt isEqualToString: @"0"]) {
+            cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
+        }else if ([txt isEqualToString: @"1"]) {
+            cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
+        }else if ([txt isEqualToString: @"2"]) {
+            cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
+        }else if ([txt isEqualToString: @"3"]) {
+            cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
+        }else if ([txt isEqualToString: @"4"]) {
+            cell.imageView.image = [UIImage imageNamed:@"list-quiet-accent.png"];
+        }
+        
+        
+        
+        
+        
         [[cell textLabel] setText:txt];
         [[cell imageView] setHidden:NO];
+        
         if (indexPath.row ==2) {
             cell.imageView.image = [UIImage imageNamed:@"Spaceship.png"];
         }
