@@ -9,6 +9,8 @@
 #import "MetronomeAppDelegate.h"
 
 @implementation MetronomeAppDelegate
+@synthesize sharedArray;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -41,6 +43,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    if([[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)] &&
+       ![[UIDevice currentDevice] isMultitaskingSupported]) {
+        /*[[NSUserDefaults standardUserDefaults] setObject:self.MetronomeViewcontroller.noteIcon forKey:@"currentArray"]; */
+    }
 }
 
 @end

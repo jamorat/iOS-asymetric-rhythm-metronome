@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MetronomeAppDelegate : UIResponder <UIApplicationDelegate>
-
 @property (strong, nonatomic) UIWindow *window;
-
+@property(atomic,retain) NSMutableArray *sharedArray;
+@property(strong,nonatomic) NSMutableArray *timeItems;
+//@property (strong, nonatomic) NSString *global_string;
 @end
