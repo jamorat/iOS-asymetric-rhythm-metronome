@@ -4,8 +4,8 @@ We think this is awesome source code, but in all humility, there's nothing propr
  - Jack Amoratis and Brian Sleeper
  
  
- ## License
- To the extent possible under law, we (Brian Sleeper and Jack Amoratis) have waived all copyright and related or neighboring rights to this source code. This work is published from: United States. No warranty is expressed or implied, nor is any fitness for a particular purpose implied. Use at your own risk.
+## License
+To the extent possible under law, we (Brian Sleeper and Jack Amoratis) have waived all copyright and related or neighboring rights to this source code. This work is published from: United States. No warranty is expressed or implied, nor is any fitness for a particular purpose implied. Use at your own risk.
 
 ## How it Came to Be
 Jack Amoratis wanted to learn how to build iOS Apps. The best way to do that? By actually making an app. So Jack asked a few friends if they had any ideas. When Jack mentioned that he was thinking of making a metronome, a friend who was a music teacher mentioned that some metronomes are variable. There is nothing new about this concept, but not many apps do it so it would be a good challenge. This teacher explained some music theory about metronomes and Jack set about building a variable metronome app. There are already metronomes on the market with this same functionality so Jack looked at their interfaces and translated that into an app paradigm.
