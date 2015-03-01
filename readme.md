@@ -1,11 +1,11 @@
 # Metronome
 Created by Brian Sleeper and Jack Amoratis on 5/17/14.
-Released into the public domain. We think this is awesome software, but in all humility, there's nothing highly secret going on here. A timer, some sounds being played, some decimals being converted into fractions. That represents the entire functionality of the program. All you need to do is pop in some buttons, labels, and a table into a view and wire it into this code, and you will have your own working variable metronome. If you can make use of this code, then feel free to fork it, or just cut and paste. No warranty is given, and we make no representation that this code is suitable for a particular purpose. Attribution appreciated but not required. This code is public domain. Enjoy!
-- Jack Amoratis and Brian Sleeper
-
-
-## License
-This is an open source, free app. Anybody can use the app, and anyone can take the source code and do whatever they want with it. The app is a free gift to the world. Use it, rename it, sell it, make a lesson from it, whatever you want. Have fun!
+We think this is awesome source code, but in all humility, there's nothing highly secret going on here. An NSTimer, some sounds being played, some decimals being converted into fractions. That pretty much represents the functionality of this asymetric rhythm tool. All you need to do is wire this code to a UITableView along with some buttons, a slider, and a few labels, and you will have your own working asymetric rhythm app. If you want to make use of this code, then feel free to fork it, or just cut and paste it into your project.
+ - Jack Amoratis and Brian Sleeper
+ 
+ 
+ ## License
+ To the extent possible under law, we (Brian Sleeper and Jack Amoratis) have waived all copyright and related or neighboring rights to this source code. This work is published from: United States. No warranty is expressed or implied, nor is any fitness for a particular purpose implied. Use at your own risk.
 
 ## How it Came to Be
 Jack Amoratis wanted to learn how to build iOS Apps. The best way to do that? By actually making an app. So Jack asked a few friends if they had any ideas. When Jack mentioned that he was thinking of making a metronome, a friend who was a music teacher mentioned that some metronomes are variable. There is nothing new about this concept, but not many apps do it so it would be a good challenge. This teacher explained some music theory about metronomes and Jack set about building a variable metronome app. There are already metronomes on the market with this same functionality so Jack looked at their interfaces and translated that into an app paradigm.
