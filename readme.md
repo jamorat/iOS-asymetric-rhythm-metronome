@@ -1,4 +1,8 @@
 # Metronome
+Created by Brian Sleeper and Jack Amoratis on 5/17/14.
+Released into the public domain. We think this is awesome software, but in all humility, there's nothing highly secret going on here. A timer, some sounds being played, some decimals being converted into fractions. That represents the entire functionality of the program. All you need to do is pop in some buttons, labels, and a table into a view and wire it into this code, and you will have your own working variable metronome. If you can make use of this code, then feel free to fork it, or just cut and paste. No warranty is given, and we make no representation that this code is suitable for a particular purpose. Attribution appreciated but not required. This code is public domain. Enjoy!
+- Jack Amoratis and Brian Sleeper
+
 
 ## License
 This is an open source, free app. Anybody can use the app, and anyone can take the source code and do whatever they want with it. The app is a free gift to the world. Use it, rename it, sell it, make a lesson from it, whatever you want. Have fun!
