@@ -70,7 +70,6 @@ MetronomeAppDelegate *metronomeAppDelegate;
         [_goButton setTitle:@"Start" forState:UIControlStateNormal];
         [_goButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
         [_bpmTimer invalidate];
-        //_bpmTimer = nil;
         NSLog(@"Stopped");
     }
 }
@@ -187,15 +186,14 @@ MetronomeAppDelegate *metronomeAppDelegate;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //handles taps on the cells to change value
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"0"]) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"1"]];
-    } else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"1"]) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"2"]];
-    } else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"2"]) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"3"]];
-    } else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"3"]) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"0"]];
+    if ([[_timeItems objectAtIndex:indexPath.row]  isEqual: @0] ) {
+        [_timeItems replaceObjectAtIndex:indexPath.row withObject:@1];
+    } else if ([[_timeItems objectAtIndex:indexPath.row]  isEqual: @1]) {
+        [_timeItems replaceObjectAtIndex:indexPath.row withObject:@2];
+    } else if ([[_timeItems objectAtIndex:indexPath.row]  isEqual: @2]) {
+        [_timeItems replaceObjectAtIndex:indexPath.row withObject:@3];
+    } else if ([[_timeItems objectAtIndex:indexPath.row]  isEqual: @3]) {
+        [_timeItems replaceObjectAtIndex:indexPath.row withObject:@0];
     }
     [_timingList reloadData];
 }
