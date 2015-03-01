@@ -1,4 +1,5 @@
-# Metronome
+# Asymmetric Rhythm Tool
+![Image of Jack Amoratis and Brian Sleeper](Brian_Sleeper_and_Jack_Amoratis.jpg)
 Created by Brian Sleeper and Jack Amoratis on 5/17/14.
 We think this is awesome source code, but in all humility, there's nothing proprietary going on here. An NSTimer, some sounds being played, some decimals being converted into fractions. That pretty much represents the functionality of this asymmetric rhythm tool. All you need to do is wire this code to a UITableView along with some buttons, a slider, and a few labels, and you will have your own working asymetric rhythm app. If you want to make use of this code, then feel free to fork it, or just cut and paste it into your project.
  - Jack Amoratis and Brian Sleeper
