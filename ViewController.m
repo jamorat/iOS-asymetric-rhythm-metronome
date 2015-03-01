@@ -58,8 +58,8 @@ MetronomeAppDelegate *metronomeAppDelegate;
 
 - (IBAction)pushedGoButton:(id)sender { [self startStopTimer:NO]; }
 
-- (void) startStopTimer:(BOOL)specialStopFlag{
-    if ([[_goButton currentTitle] isEqualToString:@"Start"] && specialStopFlag != YES) {
+- (void) startStopTimer:(BOOL)shouldStop{
+    if ([[_goButton currentTitle] isEqualToString:@"Start"] && shouldStop != YES) {
         [_goButton setTitle:@"Stop" forState:UIControlStateNormal];
         [_goButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         NSURL *soundURL1 = [[NSBundle mainBundle] URLForResource:@"tone" withExtension:@"aiff"];
@@ -120,13 +120,13 @@ MetronomeAppDelegate *metronomeAppDelegate;
     _halfNoteMS = (float)self.bpmSlideController.value/3;
     _dottedHalfNoteMS = (float)self.bpmSlideController.value/4;
     
-    _bpmDisplay.text = [self intFromFloat:_eighthNoteMS];
-    _quarterNote.text = [self intFromFloat:_quarterNoteMS];
-    _halfNote.text = [self intFromFloat:_halfNoteMS];
-    _dottedHalfNote.text = [self intFromFloat:_dottedHalfNoteMS];
+    _bpmDisplay.text = [self getBpmString:_eighthNoteMS];
+    _quarterNote.text = [self getBpmString:_quarterNoteMS];
+    _halfNote.text = [self getBpmString:_halfNoteMS];
+    _dottedHalfNote.text = [self getBpmString:_dottedHalfNoteMS];
 }
 
-- (NSString *)intFromFloat:(float)param{
+- (NSString *)getBpmString:(float)param{
     //First get main display number
     int roundedBPM = floor(param);
     
