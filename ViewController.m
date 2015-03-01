@@ -1,18 +1,15 @@
 //  ViewController.m
 //  Variable Metrognome / Asymetric Rhythm
 //
-//  Created by Brian Sleeper and Jack Amoratis on 5/17/14.
-//  Released into the public domain.
-//  We think this is awesome software, but in all humility, there's nothing
-//  highly secret going on here. A timer, some sounds being played,
-//  some decimals being converted into fractions. That represents the entire
-//  functionality of the program. All you need to do is pop in some buttons, labels,
-//  and a table into a view and you will have your own working variable
-//  metronome. If you can make use of this code, then feel free
-//  to fork it, or just cut and paste. No warranty is given, and we make
-//  no representation that this code is suitable for a paricular purpose.
-//  Attribution appreciated but not required. This code is public domain. Enjoy!
-//  - Jack Amoratis and Brian Sleeper
+/*
+Created by Brian Sleeper and Jack Amoratis on 5/17/14.
+We think this is awesome source code, but in all humility, there's nothing proprietary going on here. An NSTimer, some sounds being played, some decimals being converted into fractions. That pretty much represents the functionality of this asymmetric rhythm tool. All you need to do is wire this code to a UITableView along with some buttons, a slider, and a few labels, and you will have your own working asymetric rhythm app. If you want to make use of this code, then feel free to fork it, or just cut and paste it into your project.
+ - Jack Amoratis and Brian Sleeper
+ 
+ 
+ ## License
+ To the extent possible under law, we (Brian Sleeper and Jack Amoratis) have waived all copyright and related or neighboring rights to this source code. This work is published from: United States. No warranty is expressed or implied, nor is any fitness for a particular purpose implied. Use at your own risk.
+ */
 
 #import "MetronomeAppDelegate.h"
 #import "MetronomeViewController.h"
@@ -28,6 +25,7 @@
 @property float halfNoteMS;
 @property float dottedHalfNoteMS;
 @property (nonatomic, assign) int itemCounter;
+@property (nonatomic, assign) int whichSound;
 @property (nonatomic) NSMutableArray *noteIcons;
 @end
 
@@ -42,7 +40,7 @@ MetronomeAppDelegate *metronomeAppDelegate;
 {
     [super viewDidLoad];
     _plusButton.titleLabel.font = [UIFont systemFontOfSize:20];
-    _timeItems = [NSMutableArray arrayWithObjects: @"1", @"1", @"2", nil];
+    _timeItems = [NSMutableArray arrayWithObjects: @1, @1, @2, nil];
     _noteIcons = [NSMutableArray arrayWithObjects:@"eighth-note.png",@"quarter-note.png",@"half-note.png",@"dotted-half-note.png",nil];
     [_timingList reloadData];
     self.stepValue = 1.0f;
@@ -108,19 +106,19 @@ MetronomeAppDelegate *metronomeAppDelegate;
     if (_counter > [_timeItems count]-1){
         _counter = 0;
     }
-    NSLog(@"Current counter: %i", _counter);
-    //get time of current cell
-    NSString *whichSound = [_timeItems objectAtIndex:_counter];
+    
+    _whichSound = [[_timeItems objectAtIndex:_counter] intValue];
+    NSLog(@"whichSound: %i", _whichSound);
     [_timingList scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:_counter inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     
     //CURRENT CELL NOTE VALUE
-    if ([whichSound isEqualToString:@"0"]){
+    if (_whichSound == 0){
         _currentItemMSTop = 60/_eighthNoteMS;
-    }else if([whichSound isEqualToString:@"1"]){
+    }else if(_whichSound == 1){
         _currentItemMSTop = 60/_quarterNoteMS;
-    }else if([whichSound isEqualToString:@"2"]){
+    }else if(_whichSound == 2){
         _currentItemMSTop = 60/_halfNoteMS;
-    }else if([whichSound isEqualToString:@"3"]){
+    }else if(_whichSound == 3){
         _currentItemMSTop = 60/_dottedHalfNoteMS;
     }
     _bpmTimer = [NSTimer scheduledTimerWithTimeInterval:(_currentItemMSTop) target:self selector:@selector(soundPlayMethod) userInfo:nil repeats:NO];
@@ -209,19 +207,19 @@ MetronomeAppDelegate *metronomeAppDelegate;
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:nil];
     if (cell ==nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ident];
-        NSString * txt = [self.timeItems objectAtIndex:indexPath.row];
-        NSLog(@"Current txt: %@ row: %li",txt, (long)indexPath.row);
+        int txt = [[self.timeItems objectAtIndex:indexPath.row] intValue];
+        NSLog(@"Current txt: %i row: %li",txt, (long)indexPath.row);
         
-        if ([txt isEqualToString: @"0"]) {
+        if (txt == 0) {
             cell.textLabel.font =[UIFont fontWithName:@"MusiSync" size:70];
             cell.textLabel.text = @"  e";
-        }else if ([txt isEqualToString: @"1"]) {
+        }else if (txt == 1) {
             cell.textLabel.font =[UIFont fontWithName:@"MusiSync" size:70];
             cell.textLabel.text = @"  q";
-        }else if ([txt isEqualToString: @"2"]) {
+        }else if (txt == 2) {
             cell.textLabel.font =[UIFont fontWithName:@"MusiSync" size:70];
             cell.textLabel.text = @"  j";
-        }else if ([txt isEqualToString: @"3"]) {
+        }else if (txt == 3) {
             cell.textLabel.font =[UIFont fontWithName:@"MusiSync" size:70];
             cell.textLabel.text = @"  h";
         }
@@ -246,8 +244,6 @@ MetronomeAppDelegate *metronomeAppDelegate;
         cell.imageView.image = [UIImage imageNamed:_noteIcons[0]];
     } else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"1"]) {
         [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"2"]];
-        cell.textLabel.text = @"♩";
-        //cell.imageView.image = [UIImage imageNamed:_noteIcons[1]];
     } else if ([[_timeItems objectAtIndex:indexPath.row] isEqualToString:@"2"]) {
         [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"3"]];
         cell.imageView.image = [UIImage imageNamed:_noteIcons[2]];
