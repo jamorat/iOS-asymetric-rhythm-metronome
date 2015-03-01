@@ -44,9 +44,6 @@ MetronomeAppDelegate *metronomeAppDelegate;
     _noteIcons = [NSMutableArray arrayWithObjects:@"eighth-note.png",@"quarter-note.png",@"half-note.png",@"dotted-half-note.png",nil];
     [_timingList reloadData];
     self.stepValue = 1.0f;
-    
-    // Set the initial value to prevent any weird inconsistencies.
-    self.lastQuestionStep = (self.bpmSlideController.value) / self.stepValue*100;
     [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
     self.bpmSlideController.value = 320;
     [self updateSlider];
@@ -79,10 +76,9 @@ MetronomeAppDelegate *metronomeAppDelegate;
 - (void) startStopTimer:(BOOL)specialStopFlag{
     
     if ([[_goButton currentTitle] isEqualToString:@"Start"] && specialStopFlag != YES) {
-        NSLog(@"Started");
         [_goButton setTitle:@"Stop" forState:UIControlStateNormal];
         [_goButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        
+        NSLog(@"Started");
         NSURL *soundURL1 = [[NSBundle mainBundle] URLForResource:@"tone" withExtension:@"aiff"];        AudioServicesCreateSystemSoundID(CFBridgingRetain(soundURL1), &sound2);
         [self metroAct];
         
@@ -141,8 +137,6 @@ MetronomeAppDelegate *metronomeAppDelegate;
 -(void)updateSlider{
     float newStep = roundf((self.bpmSlideController.value) / self.stepValue);
     
-    
-    // Convert "steps" back to the context of the sliders values.
     self.bpmSlideController.value = newStep * self.stepValue;
     
     _eighthNoteMS = (float)self.bpmSlideController.value;
@@ -150,38 +144,31 @@ MetronomeAppDelegate *metronomeAppDelegate;
     _halfNoteMS = (float)self.bpmSlideController.value/3;
     _dottedHalfNoteMS = (float)self.bpmSlideController.value/4;
     
-    self.bpmDisplay.text = [NSString stringWithFormat:@"%d %@",[self intFromFloat:_eighthNoteMS],[self fractionEnding:_eighthNoteMS]];
-    self.bigDisplay.text = [NSString stringWithFormat:@"%d",[self intFromFloat:_eighthNoteMS]];
-    self.quarterNote.text = [NSString stringWithFormat:@"%d %@",[self intFromFloat:_quarterNoteMS],[self fractionEnding:_quarterNoteMS]];
-    self.halfNote.text = [NSString stringWithFormat:@"%d %@",[self intFromFloat:_halfNoteMS], [self fractionEnding:_halfNoteMS]];
-    self.dottedHalfNote.text = [NSString stringWithFormat:@"%d %@",[self intFromFloat:_dottedHalfNoteMS], [self fractionEnding:_dottedHalfNoteMS]];
+    self.bpmDisplay.text = [self intFromFloat:_eighthNoteMS];
+    self.quarterNote.text = [self intFromFloat:_quarterNoteMS];
+    self.halfNote.text = [self intFromFloat:_halfNoteMS];
+    self.dottedHalfNote.text = [self intFromFloat:_dottedHalfNoteMS];
 }
 
-- (NSString *)fractionEnding:(float)param{
-    NSString *whichFraction = [self generateFormattedNumber:param];
-    if ([whichFraction isEqualToString:@"0"] || [whichFraction isEqualToString:@"00"]) {
-        return @"";
-    } else if([whichFraction isEqualToString:@"25"]) {
-        return @"¼";
-    } else if ([whichFraction isEqualToString:@"33"]) {
-        return @"⅓";
-    } else if ([whichFraction isEqualToString:@"50"]) {
-        return @"½";
-    } else if ([whichFraction isEqualToString:@"66" ]) {
-        return @"⅔";
+- (NSString *)intFromFloat:(float)param{
+    //first get main display number
+    int roundedBPM = floor(param);
+    
+    //then get fraction ending, if any
+    int whichFraction = 100 * (param-floor(param));
+    if (whichFraction == 0){
+        return [NSString stringWithFormat:@"%d",roundedBPM ];
+    } else if(whichFraction == 25) {
+        return [NSString stringWithFormat:@"%d ¼",roundedBPM];
+    } else if (whichFraction == 33) {
+        return [NSString stringWithFormat:@"%d ⅓",roundedBPM];
+    } else if (whichFraction == 50) {
+        return [NSString stringWithFormat:@"%d ½",roundedBPM];
+    } else if (whichFraction == 66) {
+        return [NSString stringWithFormat:@"%d ⅔",roundedBPM];
     } else {
         return @"";
     }
-}
-
-- (NSString *)generateFormattedNumber:(float)param{
-    int newnew = 100 * (param-floor(param));
-    return [NSString stringWithFormat:@"%d", newnew];
-}
-
-- (int)intFromFloat:(float)param{
-    int newnew = floor(param);
-    return newnew;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
