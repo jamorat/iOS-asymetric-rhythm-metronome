@@ -33,12 +33,13 @@ MetronomeAppDelegate *metronomeAppDelegate;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSURL *toneURL = [[NSBundle mainBundle] URLForResource:@"tone" withExtension:@"aiff"];
+    AudioServicesCreateSystemSoundID(CFBridgingRetain(toneURL), &toneSound);
     _plusButton.titleLabel.font = [UIFont systemFontOfSize:20];
     _timeItems = [NSMutableArray arrayWithObjects: @1, @1, @2, nil];
     [_timingList reloadData];
-    self.stepValue = 1.0f;
-    [self.editButton setTitle:@"Edit" forState:UIControlStateNormal];
-    self.bpmSlideController.value = 320;
+    [_editButton setTitle:@"Edit" forState:UIControlStateNormal];
+    _bpmSlideController.value = 320;
     [self updateSlider];
 }
 
@@ -62,8 +63,6 @@ MetronomeAppDelegate *metronomeAppDelegate;
     if ([[_goButton currentTitle] isEqualToString:@"Start"] && shouldStop != YES) {
         [_goButton setTitle:@"Stop" forState:UIControlStateNormal];
         [_goButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        NSURL *soundURL1 = [[NSBundle mainBundle] URLForResource:@"tone" withExtension:@"aiff"];
-        AudioServicesCreateSystemSoundID(CFBridgingRetain(soundURL1), &sound2);
         [self metroAct];
         NSLog(@"Started");
     }else{
@@ -99,7 +98,7 @@ MetronomeAppDelegate *metronomeAppDelegate;
 }
 
 - (void)soundPlayMethod{
-    AudioServicesPlaySystemSound(sound2);
+    AudioServicesPlaySystemSound(toneSound);
     if (_counter > ([_timeItems count]-1)){
         _counter = 0;
     }
@@ -111,14 +110,12 @@ MetronomeAppDelegate *metronomeAppDelegate;
 - (IBAction)bpmSlideControllerAction:(UISlider *)sender { [self updateSlider]; }
 
 -(void)updateSlider{
-    float newStep = roundf((_bpmSlideController.value) / _stepValue);
+    _bpmSlideController.value = roundf((_bpmSlideController.value) / 1.0f);
     
-    _bpmSlideController.value = newStep * _stepValue;
-    
-    _eighthNoteMS = (float)self.bpmSlideController.value;
-    _quarterNoteMS = (float)self.bpmSlideController.value/2;
-    _halfNoteMS = (float)self.bpmSlideController.value/3;
-    _dottedHalfNoteMS = (float)self.bpmSlideController.value/4;
+    _eighthNoteMS = (float)_bpmSlideController.value;
+    _quarterNoteMS = (float)_bpmSlideController.value/2;
+    _halfNoteMS = (float)_bpmSlideController.value/3;
+    _dottedHalfNoteMS = (float)_bpmSlideController.value/4;
     
     _bpmDisplay.text = [self getBpmString:_eighthNoteMS];
     _quarterNote.text = [self getBpmString:_quarterNoteMS];
@@ -143,12 +140,12 @@ MetronomeAppDelegate *metronomeAppDelegate;
     } else if (whichFraction == 66) {
         return [NSString stringWithFormat:@"%d ⅔",roundedBPM];
     } else {
-        return @"";
+        return @"Error";
     }
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{ return self.timeItems.count; }
+{ return _timeItems.count; }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath { return 80; }
 
@@ -162,7 +159,7 @@ MetronomeAppDelegate *metronomeAppDelegate;
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:nil];
     if (cell ==nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ident];
-        int txt = [[self.timeItems objectAtIndex:indexPath.row] intValue];
+        int txt = [[_timeItems objectAtIndex:indexPath.row] intValue];
         NSLog(@"Current txt: %i row: %li",txt, (long)indexPath.row);
         cell.textLabel.font = [UIFont fontWithName:@"MusiSync" size:70];
         if (txt == 0) {
@@ -186,29 +183,20 @@ MetronomeAppDelegate *metronomeAppDelegate;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //handles taps on the cells to change value
-    if ([[_timeItems objectAtIndex:indexPath.row]  isEqual: @0] ) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:@1];
-    } else if ([[_timeItems objectAtIndex:indexPath.row]  isEqual: @1]) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:@2];
-    } else if ([[_timeItems objectAtIndex:indexPath.row]  isEqual: @2]) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:@3];
-    } else if ([[_timeItems objectAtIndex:indexPath.row]  isEqual: @3]) {
-        [_timeItems replaceObjectAtIndex:indexPath.row withObject:@0];
-    }
+    int itemValue = [[_timeItems objectAtIndex:indexPath.row] intValue] + 1;
+    if (itemValue > 3) { itemValue = 0; }
+    [_timeItems replaceObjectAtIndex:indexPath.row withObject:[NSNumber numberWithInteger:itemValue]];
     [_timingList reloadData];
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete){
-        
         if (indexPath.row < [_timeItems count]){
-            
             //First remove this object from the source
             [_timeItems removeObjectAtIndex:indexPath.row];
             
             //Then remove the associated cell from the Table View
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
-                             withRowAnimation:UITableViewRowAnimationLeft];
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
         }
     }
 }
