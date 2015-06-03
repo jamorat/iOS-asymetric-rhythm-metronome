@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		110242AE1A8C31FE00FCFE69 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1102427E1A8C31FE00FCFE69 /* AboutViewController.m */; };
+		110242AF1A8C31FE00FCFE69 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1102427F1A8C31FE00FCFE69 /* Base.lproj */; };
+		110242B91A8C31FE00FCFE69 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1102428A1A8C31FE00FCFE69 /* en.lproj */; };
+		110242BB1A8C31FE00FCFE69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1102428C1A8C31FE00FCFE69 /* Images.xcassets */; };
+		110242BD1A8C31FE00FCFE69 /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 1102428E1A8C31FE00FCFE69 /* ios */; };
+		110242C51A8C31FE00FCFE69 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110242961A8C31FE00FCFE69 /* Main_iPhone.storyboard */; };
+		110242C61A8C31FE00FCFE69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 110242971A8C31FE00FCFE69 /* main.m */; };
+		110242C81A8C31FE00FCFE69 /* Metrognome-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 110242991A8C31FE00FCFE69 /* Metrognome-Info.plist */; };
+		110242CA1A8C31FE00FCFE69 /* MetronomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1102429E1A8C31FE00FCFE69 /* MetronomeViewController.m */; };
+		110242CD1A8C31FE00FCFE69 /* MusiSync.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 110242A21A8C31FE00FCFE69 /* MusiSync.ttf */; };
+		110242D31A8C31FE00FCFE69 /* tone.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 110242A81A8C31FE00FCFE69 /* tone.aiff */; };
+		110242D91A8C329600FCFE69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110242D81A8C329600FCFE69 /* CoreGraphics.framework */; };
+		110242DB1A8C329F00FCFE69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110242DA1A8C329F00FCFE69 /* UIKit.framework */; };
+		110242DD1A8C32AD00FCFE69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110242DC1A8C32AD00FCFE69 /* Foundation.framework */; };
+		110242DE1A8C32C900FCFE69 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110242D51A8C323F00FCFE69 /* AudioToolbox.framework */; };
+		113DF85A1AF5CB4C0030167D /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 113DF8591AF5CB3B0030167D /* FontAwesome.ttf */; };
+		113DF8621AF5DAF00030167D /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 113DF85D1AF5DAF00030167D /* UIFont+FontAwesome.m */; };
+		113DF8631AF5DAF00030167D /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 113DF85F1AF5DAF00030167D /* NSString+FontAwesome.m */; };
+		113DF8641AF5DAF00030167D /* UIImage+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 113DF8611AF5DAF00030167D /* UIImage+FontAwesome.m */; };
+		1170E0091B0C4B7400AF142A /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1170E0081B0C4B7400AF142A /* App.xcassets */; };
+		1170E00B1B0C4F7500AF142A /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1170E00A1B0C4F7500AF142A /* Images-2.xcassets */; };
+		1170E00D1B0C4FB300AF142A /* AppIconv2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1170E00C1B0C4FB300AF142A /* AppIconv2.xcassets */; };
+		11B390E81AA3F81D0047D47E /* MetronomeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11B390E71AA3F81D0047D47E /* MetronomeAppDelegate.m */; };
+		11C30B531AEBF86400F8C01B /* NoteNumbersUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11C30B521AEBF86400F8C01B /* NoteNumbersUIView.m */; };
+		11C30B571AEC3B6100F8C01B /* sliderThumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11C30B561AEC3B6100F8C01B /* sliderThumb.jpg */; };
+		11DA0D0B1AD4CC6F001DA179 /* test1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11DA0D0A1AD4CC6F001DA179 /* test1.jpg */; };
+		11DA0D0E1AD4CD7A001DA179 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DA0D0D1AD4CD7A001DA179 /* MyCollectionViewCell.m */; };
+		11DBB3C01B06D4FD002FFB83 /* thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11DBB3BF1B06D4FD002FFB83 /* thumb.jpg */; };
+		11DBB3C31B090BFC002FFB83 /* beatLengthLineUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DBB3C21B090BFC002FFB83 /* beatLengthLineUIView.m */; };
+		11DBB3C51B091845002FFB83 /* thumbSlider.png in Resources */ = {isa = PBXBuildFile; fileRef = 11DBB3C41B091845002FFB83 /* thumbSlider.png */; };
+		11DBB3C71B091900002FFB83 /* sliderThumbImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 11DBB3C61B091900002FFB83 /* sliderThumbImage.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		11B3754D1AB10A88001FCFBB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		110242511A8C312600FCFE69 /* OpenSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1102426F1A8C312600FCFE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		110242701A8C312600FCFE69 /* RhythasymTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RhythasymTests.m; sourceTree = "<group>"; };
+		1102427D1A8C31FE00FCFE69 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		1102427E1A8C31FE00FCFE69 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		1102427F1A8C31FE00FCFE69 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		1102428A1A8C31FE00FCFE69 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		1102428C1A8C31FE00FCFE69 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1102428E1A8C31FE00FCFE69 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ios; sourceTree = "<group>"; };
+		110242961A8C31FE00FCFE69 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		110242971A8C31FE00FCFE69 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		110242991A8C31FE00FCFE69 /* Metrognome-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Metrognome-Info.plist"; sourceTree = "<group>"; };
+		1102429A1A8C31FE00FCFE69 /* Metrognome-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Metrognome-Prefix.pch"; sourceTree = "<group>"; };
+		1102429D1A8C31FE00FCFE69 /* MetronomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetronomeViewController.h; sourceTree = "<group>"; };
+		1102429E1A8C31FE00FCFE69 /* MetronomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetronomeViewController.m; sourceTree = "<group>"; };
+		110242A21A8C31FE00FCFE69 /* MusiSync.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MusiSync.ttf; sourceTree = "<group>"; };
+		110242A81A8C31FE00FCFE69 /* tone.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = tone.aiff; sourceTree = "<group>"; };
+		110242D51A8C323F00FCFE69 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		110242D81A8C329600FCFE69 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		110242DA1A8C329F00FCFE69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		110242DC1A8C32AD00FCFE69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		110242DF1A8C333900FCFE69 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		113DF8591AF5CB3B0030167D /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		113DF85B1AF5CC0D0030167D /* Jennifer Lynne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jennifer Lynne.ttf"; sourceTree = "<group>"; };
+		113DF85C1AF5DAF00030167D /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontAwesome.h"; sourceTree = "<group>"; };
+		113DF85D1AF5DAF00030167D /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontAwesome.m"; sourceTree = "<group>"; };
+		113DF85E1AF5DAF00030167D /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		113DF85F1AF5DAF00030167D /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		113DF8601AF5DAF00030167D /* UIImage+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FontAwesome.h"; sourceTree = "<group>"; };
+		113DF8611AF5DAF00030167D /* UIImage+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FontAwesome.m"; sourceTree = "<group>"; };
+		1170E0081B0C4B7400AF142A /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = App.xcassets; path = "../../../Downloads/icon (1)/ios/AppIcon2.appiconset/App.xcassets"; sourceTree = "<group>"; };
+		1170E00A1B0C4F7500AF142A /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		1170E00C1B0C4FB300AF142A /* AppIconv2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIconv2.xcassets; sourceTree = "<group>"; };
+		11B3752C1AB10A86001FCFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11B3752D1AB10A86001FCFBB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		11B3752E1AB10A86001FCFBB /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		11B3752F1AB10A86001FCFBB /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		11B375311AB10A86001FCFBB /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		11B375321AB10A86001FCFBB /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		11B375341AB10A86001FCFBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		11B3753E1AB10A87001FCFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11B375401AB10A87001FCFBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		11B375421AB10A87001FCFBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		11B390E61AA3F81D0047D47E /* MetronomeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetronomeAppDelegate.h; sourceTree = "<group>"; };
+		11B390E71AA3F81D0047D47E /* MetronomeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetronomeAppDelegate.m; sourceTree = "<group>"; };
+		11C30B511AEBF86400F8C01B /* NoteNumbersUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteNumbersUIView.h; sourceTree = "<group>"; };
+		11C30B521AEBF86400F8C01B /* NoteNumbersUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteNumbersUIView.m; sourceTree = "<group>"; };
+		11C30B561AEC3B6100F8C01B /* sliderThumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sliderThumb.jpg; sourceTree = "<group>"; };
+		11DA0D0A1AD4CC6F001DA179 /* test1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpg; sourceTree = "<group>"; };
+		11DA0D0C1AD4CD7A001DA179 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		11DA0D0D1AD4CD7A001DA179 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		11DBB3BF1B06D4FD002FFB83 /* thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thumb.jpg; sourceTree = "<group>"; };
+		11DBB3C11B090BFC002FFB83 /* beatLengthLineUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beatLengthLineUIView.h; sourceTree = "<group>"; };
+		11DBB3C21B090BFC002FFB83 /* beatLengthLineUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = beatLengthLineUIView.m; sourceTree = "<group>"; };
+		11DBB3C41B091845002FFB83 /* thumbSlider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbSlider.png; sourceTree = "<group>"; };
+		11DBB3C61B091900002FFB83 /* sliderThumbImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumbImage.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1102424E1A8C312600FCFE69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110242DE1A8C32C900FCFE69 /* AudioToolbox.framework in Frameworks */,
+				110242DD1A8C32AD00FCFE69 /* Foundation.framework in Frameworks */,
+				110242DB1A8C329F00FCFE69 /* UIKit.framework in Frameworks */,
+				110242D91A8C329600FCFE69 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		110242481A8C312500FCFE69 = {
+			isa = PBXGroup;
+			children = (
+				1170E0081B0C4B7400AF142A /* App.xcassets */,
+				110242531A8C312600FCFE69 /* Rhythasym */,
+				1102426D1A8C312600FCFE69 /* RhythasymTests */,
+				11B3752A1AB10A85001FCFBB /* Rhythasym WatchKit Extension */,
+				11B3753C1AB10A87001FCFBB /* Rhythasym WatchKit App */,
+				110242521A8C312600FCFE69 /* Products */,
+				110242D71A8C326100FCFE69 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		110242521A8C312600FCFE69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				110242511A8C312600FCFE69 /* OpenSource.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		110242531A8C312600FCFE69 /* Rhythasym */ = {
+			isa = PBXGroup;
+			children = (
+				110242961A8C31FE00FCFE69 /* Main_iPhone.storyboard */,
+				1102429D1A8C31FE00FCFE69 /* MetronomeViewController.h */,
+				1102429E1A8C31FE00FCFE69 /* MetronomeViewController.m */,
+				11DA0D0C1AD4CD7A001DA179 /* MyCollectionViewCell.h */,
+				11C30B561AEC3B6100F8C01B /* sliderThumb.jpg */,
+				11DA0D0D1AD4CD7A001DA179 /* MyCollectionViewCell.m */,
+				110242DF1A8C333900FCFE69 /* Info.plist */,
+				1102427D1A8C31FE00FCFE69 /* AboutViewController.h */,
+				11DA0D0A1AD4CC6F001DA179 /* test1.jpg */,
+				1102427E1A8C31FE00FCFE69 /* AboutViewController.m */,
+				11C30B511AEBF86400F8C01B /* NoteNumbersUIView.h */,
+				11C30B521AEBF86400F8C01B /* NoteNumbersUIView.m */,
+				11DBB3C11B090BFC002FFB83 /* beatLengthLineUIView.h */,
+				11DBB3C21B090BFC002FFB83 /* beatLengthLineUIView.m */,
+				1102427F1A8C31FE00FCFE69 /* Base.lproj */,
+				1102428A1A8C31FE00FCFE69 /* en.lproj */,
+				1102428C1A8C31FE00FCFE69 /* Images.xcassets */,
+				1170E00C1B0C4FB300AF142A /* AppIconv2.xcassets */,
+				1102428E1A8C31FE00FCFE69 /* ios */,
+				110242971A8C31FE00FCFE69 /* main.m */,
+				110242991A8C31FE00FCFE69 /* Metrognome-Info.plist */,
+				1102429A1A8C31FE00FCFE69 /* Metrognome-Prefix.pch */,
+				11B390E61AA3F81D0047D47E /* MetronomeAppDelegate.h */,
+				11B390E71AA3F81D0047D47E /* MetronomeAppDelegate.m */,
+				113DF85B1AF5CC0D0030167D /* Jennifer Lynne.ttf */,
+				113DF8591AF5CB3B0030167D /* FontAwesome.ttf */,
+				110242A21A8C31FE00FCFE69 /* MusiSync.ttf */,
+				110242A81A8C31FE00FCFE69 /* tone.aiff */,
+				113DF85C1AF5DAF00030167D /* UIFont+FontAwesome.h */,
+				113DF85D1AF5DAF00030167D /* UIFont+FontAwesome.m */,
+				113DF85E1AF5DAF00030167D /* NSString+FontAwesome.h */,
+				113DF85F1AF5DAF00030167D /* NSString+FontAwesome.m */,
+				113DF8601AF5DAF00030167D /* UIImage+FontAwesome.h */,
+				113DF8611AF5DAF00030167D /* UIImage+FontAwesome.m */,
+				11DBB3BF1B06D4FD002FFB83 /* thumb.jpg */,
+				11DBB3C41B091845002FFB83 /* thumbSlider.png */,
+				11DBB3C61B091900002FFB83 /* sliderThumbImage.png */,
+				1170E00A1B0C4F7500AF142A /* Images-2.xcassets */,
+			);
+			path = Rhythasym;
+			sourceTree = "<group>";
+		};
+		1102426D1A8C312600FCFE69 /* RhythasymTests */ = {
+			isa = PBXGroup;
+			children = (
+				110242701A8C312600FCFE69 /* RhythasymTests.m */,
+				1102426E1A8C312600FCFE69 /* Supporting Files */,
+			);
+			path = RhythasymTests;
+			sourceTree = "<group>";
+		};
+		1102426E1A8C312600FCFE69 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1102426F1A8C312600FCFE69 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		110242D71A8C326100FCFE69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				110242DC1A8C32AD00FCFE69 /* Foundation.framework */,
+				110242DA1A8C329F00FCFE69 /* UIKit.framework */,
+				110242D81A8C329600FCFE69 /* CoreGraphics.framework */,
+				110242D51A8C323F00FCFE69 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11B3752A1AB10A85001FCFBB /* Rhythasym WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				11B3752E1AB10A86001FCFBB /* InterfaceController.h */,
+				11B3752F1AB10A86001FCFBB /* InterfaceController.m */,
+				11B375311AB10A86001FCFBB /* NotificationController.h */,
+				11B375321AB10A86001FCFBB /* NotificationController.m */,
+				11B375341AB10A86001FCFBB /* Images.xcassets */,
+				11B3752B1AB10A86001FCFBB /* Supporting Files */,
+			);
+			path = "Rhythasym WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		11B3752B1AB10A86001FCFBB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11B3752C1AB10A86001FCFBB /* Info.plist */,
+				11B3752D1AB10A86001FCFBB /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11B3753C1AB10A87001FCFBB /* Rhythasym WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				11B3753F1AB10A87001FCFBB /* Interface.storyboard */,
+				11B375421AB10A87001FCFBB /* Images.xcassets */,
+				11B3753D1AB10A87001FCFBB /* Supporting Files */,
+			);
+			path = "Rhythasym WatchKit App";
+			sourceTree = "<group>";
+		};
+		11B3753D1AB10A87001FCFBB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11B3753E1AB10A87001FCFBB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		110242501A8C312600FCFE69 /* OpenSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 110242741A8C312600FCFE69 /* Build configuration list for PBXNativeTarget "OpenSource" */;
+			buildPhases = (
+				1102424D1A8C312600FCFE69 /* Sources */,
+				1102424E1A8C312600FCFE69 /* Frameworks */,
+				1102424F1A8C312600FCFE69 /* Resources */,
+				11B3754D1AB10A88001FCFBB /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenSource;
+			productName = Rhythasym;
+			productReference = 110242511A8C312600FCFE69 /* OpenSource.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		110242491A8C312500FCFE69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = JackAmoratis;
+				TargetAttributes = {
+					110242501A8C312600FCFE69 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 1102424C1A8C312500FCFE69 /* Build configuration list for PBXProject "OpenSource" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 110242481A8C312500FCFE69;
+			productRefGroup = 110242521A8C312600FCFE69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				110242501A8C312600FCFE69 /* OpenSource */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1102424F1A8C312600FCFE69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				113DF85A1AF5CB4C0030167D /* FontAwesome.ttf in Resources */,
+				11DBB3C71B091900002FFB83 /* sliderThumbImage.png in Resources */,
+				110242C51A8C31FE00FCFE69 /* Main_iPhone.storyboard in Resources */,
+				110242BB1A8C31FE00FCFE69 /* Images.xcassets in Resources */,
+				1170E00D1B0C4FB300AF142A /* AppIconv2.xcassets in Resources */,
+				110242C81A8C31FE00FCFE69 /* Metrognome-Info.plist in Resources */,
+				11DA0D0B1AD4CC6F001DA179 /* test1.jpg in Resources */,
+				110242BD1A8C31FE00FCFE69 /* ios in Resources */,
+				110242AF1A8C31FE00FCFE69 /* Base.lproj in Resources */,
+				1170E0091B0C4B7400AF142A /* App.xcassets in Resources */,
+				110242CD1A8C31FE00FCFE69 /* MusiSync.ttf in Resources */,
+				110242D31A8C31FE00FCFE69 /* tone.aiff in Resources */,
+				110242B91A8C31FE00FCFE69 /* en.lproj in Resources */,
+				11DBB3C51B091845002FFB83 /* thumbSlider.png in Resources */,
+				11C30B571AEC3B6100F8C01B /* sliderThumb.jpg in Resources */,
+				1170E00B1B0C4F7500AF142A /* Images-2.xcassets in Resources */,
+				11DBB3C01B06D4FD002FFB83 /* thumb.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1102424D1A8C312600FCFE69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110242C61A8C31FE00FCFE69 /* main.m in Sources */,
+				110242AE1A8C31FE00FCFE69 /* AboutViewController.m in Sources */,
+				110242CA1A8C31FE00FCFE69 /* MetronomeViewController.m in Sources */,
+				11B390E81AA3F81D0047D47E /* MetronomeAppDelegate.m in Sources */,
+				113DF8631AF5DAF00030167D /* NSString+FontAwesome.m in Sources */,
+				113DF8621AF5DAF00030167D /* UIFont+FontAwesome.m in Sources */,
+				11DA0D0E1AD4CD7A001DA179 /* MyCollectionViewCell.m in Sources */,
+				11C30B531AEBF86400F8C01B /* NoteNumbersUIView.m in Sources */,
+				11DBB3C31B090BFC002FFB83 /* beatLengthLineUIView.m in Sources */,
+				113DF8641AF5DAF00030167D /* UIImage+FontAwesome.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		11B3753F1AB10A87001FCFBB /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11B375401AB10A87001FCFBB /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		110242721A8C312600FCFE69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		110242731A8C312600FCFE69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		110242751A8C312600FCFE69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Rhythasym/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = OpenSource;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		110242761A8C312600FCFE69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Rhythasym/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = OpenSource;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1102424C1A8C312500FCFE69 /* Build configuration list for PBXProject "OpenSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				110242721A8C312600FCFE69 /* Debug */,
+				110242731A8C312600FCFE69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		110242741A8C312600FCFE69 /* Build configuration list for PBXNativeTarget "OpenSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				110242751A8C312600FCFE69 /* Debug */,
+				110242761A8C312600FCFE69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 110242491A8C312500FCFE69 /* Project object */;
+}

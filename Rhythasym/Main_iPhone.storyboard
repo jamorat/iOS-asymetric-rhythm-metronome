@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MusiSync.ttf">
+            <string>MusiSync</string>
+            <string>MusiSync</string>
+            <string>MusiSync</string>
+            <string>MusiSync</string>
+            <string>MusiSync</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--MetroViewController-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="MetroViewController" id="vXZ-lx-hvc" customClass="MetronomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vcS-QD-8oy"/>
+                        <viewControllerLayoutGuide type="bottom" id="QNF-Hw-Yca"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfg-C7-ncw">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="i" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQF-7I-1dI">
+                                        <rect key="frame" x="21" y="517" width="4" height="21"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="uicollectionviewrestore" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jeA-2Y-hdG">
+                                        <rect key="frame" x="0.0" y="246" width="272" height="69"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vah-Ce-mNl">
+                                            <size key="itemSize" width="52" height="69"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="myCell" reuseIdentifier="MyCell" id="wlx-Jt-N0U" customClass="MyCollectionViewCell">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="69"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN6-m8-sED">
+                                                            <rect key="frame" x="3" y="0.0" width="46" height="66"/>
+                                                            <state key="normal" title=" ">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cellLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET0-vf-03G">
+                                                            <rect key="frame" x="0.0" y="0.0" width="52" height="69"/>
+                                                            <gestureRecognizers/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="vXZ-lx-hvc" id="dJh-kd-edn"/>
+                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="YcX-eY-EDV"/>
+                                        </connections>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlq-KL-WYf">
+                                        <rect key="frame" x="8" y="499" width="30" height="41"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.1477201984" green="1" blue="0.97520134410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title=" ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="zmx-C6-l5M" kind="modal" id="CIh-pM-lBQ"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD4-0U-JZR">
+                                        <rect key="frame" x="98" y="464" width="124" height="84"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" red="0.10686223877507539" green="0.86948029891304346" blue="0.15749554072656738" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pushedGoButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qkv-SS-ow1"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ekw-ld-0Rk">
+                                        <rect key="frame" x="100" y="303" width="53" height="66"/>
+                                    </imageView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2N-C3-6ug">
+                                        <rect key="frame" x="8" y="363" width="290" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPj-HB-DWx">
+                                        <rect key="frame" x="8" y="334" width="145" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksk-Il-Ok5" customClass="NoteNumbersUIView">
+                                        <rect key="frame" x="8" y="85" width="297" height="105"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="240.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq3-7B-1FD">
+                                                <rect key="frame" x="181" y="16" width="76" height="21"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="360.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SO0-gI-Ato">
+                                                <rect key="frame" x="103" y="16" width="76" height="21"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="e" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcD-hJ-EJB">
+                                                <rect key="frame" x="8" y="-3" width="18" height="47"/>
+                                                <fontDescription key="fontDescription" name="MusiSync" family="MusiSync" pointSize="36"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="q" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QK-Ub-5fH">
+                                                <rect key="frame" x="92" y="0.0" width="19" height="47"/>
+                                                <fontDescription key="fontDescription" name="MusiSync" family="MusiSync" pointSize="36"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="h" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYA-Ye-omO">
+                                                <rect key="frame" x="171" y="0.0" width="20" height="47"/>
+                                                <fontDescription key="fontDescription" name="MusiSync" family="MusiSync" pointSize="36"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="720.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3d-uh-bC0">
+                                                <rect key="frame" x="24" y="15" width="76" height="21"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="180.000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3Y-el-7Ju">
+                                                <rect key="frame" x="252" y="16" width="76" height="21"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="j" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkO-KB-OEF">
+                                                <rect key="frame" x="243" y="2" width="20" height="47"/>
+                                                <fontDescription key="fontDescription" name="MusiSync" family="MusiSync" pointSize="36"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="320" minValue="1" maxValue="720" translatesAutoresizingMaskIntoConstraints="NO" id="QqX-ya-Lk1">
+                                                <rect key="frame" x="13" y="67" width="286" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="bpmSlideControllerAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="2CI-CG-zis"/>
+                                                </connections>
+                                            </slider>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="whole_line" translatesAutoresizingMaskIntoConstraints="NO" id="RPU-ga-cUV" customClass="beatLengthLineUIView">
+                                                <rect key="frame" x="24" y="6" width="72" height="5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="half_line" translatesAutoresizingMaskIntoConstraints="NO" id="8gb-6w-vk1" customClass="beatLengthLineUIView">
+                                                <rect key="frame" x="106" y="6" width="36" height="5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="quarter_line" translatesAutoresizingMaskIntoConstraints="NO" id="cZx-ME-EuX" customClass="beatLengthLineUIView">
+                                                <rect key="frame" x="183" y="6" width="24" height="5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="dottedhalf_line" translatesAutoresizingMaskIntoConstraints="NO" id="NDC-yM-Wp1" customClass="beatLengthLineUIView">
+                                                <rect key="frame" x="253" y="6" width="18" height="5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Use this slider to speed up or slow down" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7X-cl-QKS">
+                                                <rect key="frame" x="29" y="44" width="239" height="21"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="298" id="Ebo-1c-5n4"/>
+                                            <constraint firstItem="QqX-ya-Lk1" firstAttribute="leading" secondItem="ksk-Il-Ok5" secondAttribute="leading" constant="15" id="LRK-0N-Apg"/>
+                                            <constraint firstAttribute="bottom" secondItem="QqX-ya-Lk1" secondAttribute="bottom" constant="8" id="Xes-0i-6oz"/>
+                                            <constraint firstAttribute="centerX" secondItem="g7X-cl-QKS" secondAttribute="centerX" id="vTz-OM-Uki"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDD-ke-rNo">
+                                        <rect key="frame" x="204" y="303" width="46" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="q" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXL-y6-ho5">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="66"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="MusiSync" family="MusiSync" pointSize="55"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3g-jQ-0ti">
+                                        <rect key="frame" x="120" y="392" width="66" height="57"/>
+                                        <state key="normal" title="&gt;">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KGy-GG-xK8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB7-IY-RS4">
+                                        <rect key="frame" x="275" y="499" width="30" height="41"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.1477201984" green="1" blue="0.97520134410000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title=" ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="helpButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ru7-fc-9ta"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ctR-Um-Ujl">
+                                        <rect key="frame" x="274" y="246" width="49" height="69"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K22-cF-8zm">
+                                                <rect key="frame" x="2" y="7" width="39" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="39" id="u3H-Wa-slZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" red="0.47058823529999999" green="0.074509803920000006" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuB-Vo-RR2">
+                                                <rect key="frame" x="2" y="40" width="39" height="21"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="35"/>
+                                                <color key="textColor" red="0.47058823529999999" green="0.074509803920000006" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVG-FJ-rs4">
+                                                <rect key="frame" x="-14" y="-8" width="51" height="77"/>
+                                                <state key="normal" title=" ">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="thumbTabButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Scf-NO-jzI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xX2-TE-PxA">
+                                        <rect key="frame" x="286" y="516" width="9" height="24"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tap notes to change them to different notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-Dm-K0r">
+                                        <rect key="frame" x="59" y="315" width="241" height="21"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hold and then drag notes to reorder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clj-fA-fpY">
+                                        <rect key="frame" x="59" y="328" width="206" height="21"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Drag notes out of the line up to delete them" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qB5-wt-zW5">
+                                        <rect key="frame" x="31" y="344" width="267" height="21"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qjo-BR-W9P">
+                                        <rect key="frame" x="19" y="392" width="281" height="31"/>
+                                        <connections>
+                                            <action selector="junSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="G4v-8Y-kUD"/>
+                                        </connections>
+                                    </slider>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Beats correspond to note lengths" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J33-yU-Vnk">
+                                        <rect key="frame" x="28" y="51" width="257" height="21"/>
+                                        <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63529411759999999" green="0.52156862749999999" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="f4s-Dm-K0r" firstAttribute="top" secondItem="jeA-2Y-hdG" secondAttribute="bottom" id="4U3-cA-3im"/>
+                                    <constraint firstAttribute="bottom" secondItem="tQF-7I-1dI" secondAttribute="bottom" constant="10" id="8t7-55-HUp"/>
+                                    <constraint firstItem="ctR-Um-Ujl" firstAttribute="top" secondItem="ksk-Il-Ok5" secondAttribute="bottom" constant="56" id="DPh-Mn-ifv"/>
+                                    <constraint firstItem="tQF-7I-1dI" firstAttribute="leading" secondItem="Xfg-C7-ncw" secondAttribute="leading" constant="21" id="GFg-fn-WuO"/>
+                                    <constraint firstAttribute="bottom" secondItem="qlq-KL-WYf" secondAttribute="bottom" constant="8" id="Hx3-Ps-fQ3"/>
+                                    <constraint firstItem="bD4-0U-JZR" firstAttribute="top" secondItem="s3g-jQ-0ti" secondAttribute="bottom" constant="15" id="Kb0-xO-dG4"/>
+                                    <constraint firstItem="qB5-wt-zW5" firstAttribute="top" secondItem="f4s-Dm-K0r" secondAttribute="bottom" constant="8" id="OeJ-3l-O5H"/>
+                                    <constraint firstAttribute="centerX" secondItem="s3g-jQ-0ti" secondAttribute="centerX" id="PNs-dO-pKW"/>
+                                    <constraint firstAttribute="bottom" secondItem="xX2-TE-PxA" secondAttribute="bottom" constant="8" id="SWI-DN-v9b"/>
+                                    <constraint firstAttribute="centerX" secondItem="clj-fA-fpY" secondAttribute="centerX" id="UXY-A7-Xdq"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ctR-Um-Ujl" secondAttribute="trailing" constant="-3" id="X95-Il-A9z"/>
+                                    <constraint firstAttribute="centerX" secondItem="ksk-Il-Ok5" secondAttribute="centerX" id="Xja-eq-Asf"/>
+                                    <constraint firstAttribute="bottom" secondItem="uB7-IY-RS4" secondAttribute="bottom" constant="8" id="Zd4-Ua-aMb"/>
+                                    <constraint firstItem="clj-fA-fpY" firstAttribute="top" secondItem="jeA-2Y-hdG" secondAttribute="bottom" constant="14" id="brQ-HZ-WIn"/>
+                                    <constraint firstAttribute="centerX" secondItem="J33-yU-Vnk" secondAttribute="centerX" id="fhH-qg-hem"/>
+                                    <constraint firstAttribute="trailing" secondItem="jeA-2Y-hdG" secondAttribute="trailing" constant="48" id="gJf-WG-I6j"/>
+                                    <constraint firstAttribute="centerX" secondItem="f4s-Dm-K0r" secondAttribute="centerX" id="hXX-6q-Ijz"/>
+                                    <constraint firstItem="qlq-KL-WYf" firstAttribute="leading" secondItem="Xfg-C7-ncw" secondAttribute="leading" constant="8" id="hfZ-aS-h7l"/>
+                                    <constraint firstItem="jeA-2Y-hdG" firstAttribute="leading" secondItem="Xfg-C7-ncw" secondAttribute="leading" id="v9b-Q4-CHW"/>
+                                    <constraint firstAttribute="centerX" secondItem="qB5-wt-zW5" secondAttribute="centerX" id="x6o-Eb-1Bf"/>
+                                    <constraint firstAttribute="trailing" secondItem="uB7-IY-RS4" secondAttribute="trailing" constant="15" id="xQO-LW-130"/>
+                                    <constraint firstItem="ksk-Il-Ok5" firstAttribute="top" secondItem="Xfg-C7-ncw" secondAttribute="top" constant="85" id="z80-AT-TNa"/>
+                                    <constraint firstAttribute="trailing" secondItem="ctR-Um-Ujl" secondAttribute="trailing" constant="2" id="zlD-a7-gel"/>
+                                    <constraint firstAttribute="trailing" secondItem="xX2-TE-PxA" secondAttribute="trailing" constant="25" id="zz3-Kf-j6q"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QNF-Hw-Yca" firstAttribute="top" secondItem="Xfg-C7-ncw" secondAttribute="bottom" id="7mP-cF-ldH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xfg-C7-ncw" secondAttribute="trailing" constant="-16" id="cp5-qq-y49"/>
+                            <constraint firstItem="Xfg-C7-ncw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="gfZ-LN-buW"/>
+                            <constraint firstItem="Xfg-C7-ncw" firstAttribute="top" secondItem="vcS-QD-8oy" secondAttribute="bottom" id="sBa-je-oWX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3oV-IW-saR"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="ball" destination="Ekw-ld-0Rk" id="kMr-Cd-v04"/>
+                        <outlet property="ball2" destination="KDD-ke-rNo" id="wxC-3S-ZfF"/>
+                        <outlet property="ball2Label" destination="UXL-y6-ho5" id="a5v-ne-h3r"/>
+                        <outlet property="beatsUICollectionView" destination="jeA-2Y-hdG" id="X1F-wg-dTN"/>
+                        <outlet property="bpmSlideController" destination="QqX-ya-Lk1" id="STp-C8-fdR"/>
+                        <outlet property="dottedHalfLabel" destination="jq3-7B-1FD" id="6f7-U3-hUR"/>
+                        <outlet property="dotted_half_note_line" destination="NDC-yM-Wp1" id="0Np-Hx-CI6"/>
+                        <outlet property="eighthLabel" destination="K3d-uh-bC0" id="L0m-id-iDc"/>
+                        <outlet property="goButton" destination="bD4-0U-JZR" id="K1k-d9-P9N"/>
+                        <outlet property="halfLabel" destination="n3Y-el-7Ju" id="vSl-GS-9OJ"/>
+                        <outlet property="half_note_line" destination="8gb-6w-vk1" id="qaT-Ot-Y7r"/>
+                        <outlet property="helpQuestionMarkLabel" destination="xX2-TE-PxA" id="xJv-BR-OdY"/>
+                        <outlet property="helpText1" destination="g7X-cl-QKS" id="wgl-px-5J8"/>
+                        <outlet property="helpText2" destination="f4s-Dm-K0r" id="Bci-hs-WoG"/>
+                        <outlet property="helpText3" destination="clj-fA-fpY" id="Rv0-Ds-2u9"/>
+                        <outlet property="helpText4" destination="qB5-wt-zW5" id="KIu-E9-DY6"/>
+                        <outlet property="helpText5" destination="J33-yU-Vnk" id="f8K-SM-iso"/>
+                        <outlet property="junjun" destination="Xfg-C7-ncw" id="2K2-OV-SKY"/>
+                        <outlet property="numbersView" destination="ksk-Il-Ok5" id="bIg-PT-czx"/>
+                        <outlet property="playButton" destination="s3g-jQ-0ti" id="WMF-RZ-FVD"/>
+                        <outlet property="quarterLabel" destination="SO0-gI-Ato" id="mMp-IP-tpz"/>
+                        <outlet property="quarter_note_line" destination="cZx-ME-EuX" id="MYS-pU-rWU"/>
+                        <outlet property="thumbButtonLabel" destination="CuB-Vo-RR2" id="mdL-1D-wyh"/>
+                        <outlet property="thumbTab" destination="ctR-Um-Ujl" id="YiR-AH-Kis"/>
+                        <outlet property="thumbTabButton" destination="dVG-FJ-rs4" id="5ev-mt-h1A"/>
+                        <outlet property="thumbTabCountLabel" destination="K22-cF-8zm" id="tJ1-7z-8n4"/>
+                        <outlet property="thumbTabNumberLabel" destination="dVG-FJ-rs4" id="byA-vy-5Kd"/>
+                        <outlet property="whole_note_line" destination="RPU-ga-cUV" id="wI8-v9-XCW"/>
+                        <outlet property="xCoord" destination="dPj-HB-DWx" id="umH-XY-5uI"/>
+                        <outlet property="yCoord" destination="N2N-C3-6ug" id="Uob-iX-H0P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="51"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="hDs-aQ-1fu">
+            <objects>
+                <viewController id="zmx-C6-l5M" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A5R-ec-nEY"/>
+                        <viewControllerLayoutGuide type="bottom" id="chI-xO-ByD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZnF-5S-Mak">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Oy-cG-TS3">
+                                <rect key="frame" x="0.0" y="20" width="320" height="191"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.074509803920000006" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The code for this open source project is at: github.com/jamorat" translatesAutoresizingMaskIntoConstraints="NO" id="Y4q-zI-0GL">
+                                <rect key="frame" x="16" y="198" width="288" height="312"/>
+                                <color key="backgroundColor" red="0.47058823529999999" green="0.074509803920000006" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eu2-i2-f4t">
+                                <rect key="frame" x="138" y="518" width="45" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.47058823529999999" green="0.074509803920000006" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title=" Done ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="aj3-2F-CU9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0uk-tR-QIx">
+                                <rect key="frame" x="0.0" y="-2" width="320" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="UWx-lm-ZEO"/>
+                                    <constraint firstAttribute="height" constant="180" id="Uoh-jd-6fF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47058823529999999" green="0.074509803920000006" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="0uk-tR-QIx" secondAttribute="centerX" id="5jI-v8-8La"/>
+                            <constraint firstItem="2Oy-cG-TS3" firstAttribute="top" secondItem="A5R-ec-nEY" secondAttribute="bottom" id="Cpc-Bi-sKy"/>
+                            <constraint firstItem="Y4q-zI-0GL" firstAttribute="leading" secondItem="ZnF-5S-Mak" secondAttribute="leadingMargin" id="LL6-fc-lb8"/>
+                            <constraint firstItem="Y4q-zI-0GL" firstAttribute="top" secondItem="A5R-ec-nEY" secondAttribute="bottom" constant="178" id="MgJ-me-zwZ"/>
+                            <constraint firstItem="Y4q-zI-0GL" firstAttribute="trailing" secondItem="ZnF-5S-Mak" secondAttribute="trailingMargin" id="bpE-yP-mH6"/>
+                            <constraint firstItem="0uk-tR-QIx" firstAttribute="top" secondItem="ZnF-5S-Mak" secondAttribute="topMargin" constant="-2" id="eSw-lH-HZI"/>
+                            <constraint firstItem="chI-xO-ByD" firstAttribute="top" secondItem="eu2-i2-f4t" secondAttribute="bottom" constant="20" id="iJK-Bi-YJq"/>
+                            <constraint firstItem="eu2-i2-f4t" firstAttribute="top" secondItem="Y4q-zI-0GL" secondAttribute="bottom" constant="8" id="jpA-tT-IzE"/>
+                            <constraint firstItem="0uk-tR-QIx" firstAttribute="top" secondItem="ZnF-5S-Mak" secondAttribute="topMargin" constant="-2" id="qp1-Vt-ZJy"/>
+                            <constraint firstAttribute="centerX" secondItem="eu2-i2-f4t" secondAttribute="centerX" id="tWS-dG-brW"/>
+                            <constraint firstAttribute="centerX" secondItem="2Oy-cG-TS3" secondAttribute="centerX" id="zsv-Yh-WBO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ydh-mW-m8i"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="bioBox" destination="Y4q-zI-0GL" id="Hww-0W-Jop"/>
+                        <outlet property="doneButton" destination="eu2-i2-f4t" id="gVs-Yc-08J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BlB-gx-lyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="-40"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="test1.jpg" width="91" height="71"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <color key="tintColor" red="0.38823529411764707" green="0.0" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+</document>
